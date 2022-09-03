@@ -1,0 +1,26 @@
+<html> 
+<head> 
+<script> 
+function checkPassword() { 
+    let num1 = Number(document.querySelector("#pass1").value);
+    let num2 = Number(document.querySelector("#pass2").value);
+    var errormsg=document.getElementById("errormsg");
+    if(num1==num2){
+        errormsg.innerHTML="Correct"
+    }
+    else{
+        errormsg.style.color="red";
+        errormsg.innerHTML="Incorrect"
+    }
+ } 
+</script> 
+</head> 
+<body> 
+ <h1>Register</h1> 
+ Username: <input type="text"><br> 
+ Password: <input type="text" id="pass1"><br> 
+ Re-type Password: <input type="text" id="pass2"><br>  
+ <input type="submit" onclick="checkPassword()"> 
+ <div id="errormsg"></div> 
+</body> 
+</html>
